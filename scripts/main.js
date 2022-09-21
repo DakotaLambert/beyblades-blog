@@ -1,11 +1,11 @@
 import { BeyBlog } from "./BeyBlog.js";
-import { getAuthors } from "./database.js";
-import { getCategories } from "./database.js";
-import { getArticles } from "./database.js";
+import { getAuthors, getCategories, getArticles } from "./database.js";
+import { categoriesFunction } from './categories.js'
 
 const authors = getAuthors();
 const articles = getArticles();
 const categories = getCategories();
+const categoriesString = categoriesFunction(categories)
 
 const container = document.querySelector("#container");
 
@@ -33,26 +33,16 @@ const authorsFunction = (authors) => {
   return authorsHTML;
 };
 
-const categoriesFunction = (categories) => {
-  let htmlString = "<ul>";
-  for (const category of categories) {
-    htmlString += `<li id="category--${category.id}>"${category.name}</li>`;
-  }
-  htmlString += "</ul>";
-  return htmlString;
-};
-
 const articleString = articleFunction(articles);
 const authorsString = authorsFunction(authors);
-const categoriesString = categoriesFunction(categories);
+
+let categoriesHTML = document.querySelector("#categories");
+categoriesHTML.innerHTML = categoriesString;
 
 const articlesHTML = document.querySelector("#articles");
 articlesHTML.innerHTML = articleString; // todo: why are we getting an error here?
 
 const authorsHTMLString = document.querySelector("#authors");
 authorsHTMLString.innerHTML = authorsString;
-
-let categoriesHTML = document.querySelector("#categories");
-categoriesHTML.innerHTML = categoriesString;
 
 // render();
