@@ -3,3 +3,17 @@
 body {
   font-family: "Quicksand", sans-serif;
 }
+
+#content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#authors {
+}
+
+#articles {
+}
+
+#categories {
+}
