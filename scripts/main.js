@@ -14,7 +14,7 @@ const render = () => {
 };
 
 render();
-
+// * Jesier / Reggie
 const articleFunction = (articles) => {
   let articlesHTML = "<ul>";
   for (const article of articles) {
@@ -23,8 +23,8 @@ const articleFunction = (articles) => {
   articlesHTML += "</ul>";
   return articlesHTML;
 };
-
-const authorsFunction = (authors) => {
+// * Maria / Ricky
+const authorsFunction = (authors) => { 
   let authorsHTML = "<ul>";
   for (const author of authors) {
     authorsHTML += `<li id="author--${author.id}>"${author.name}</li>`;
@@ -32,7 +32,7 @@ const authorsFunction = (authors) => {
   authorsHTML += "</ul>";
   return authorsHTML;
 };
-
+// * Justin
 const categoriesFunction = (categories) => {
   let htmlString = "<ul>";
   for (const category of categories) {
