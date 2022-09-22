@@ -1,6 +1,6 @@
 import { BeyBlog } from "./BeyBlog.js";
 import { getAuthors, getCategories, getArticles } from "./database.js";
-import { categoriesFunction } from './categories.js'
+import { categoriesFunction } from './Categories.js'
 
 const authors = getAuthors();
 const articles = getArticles();
@@ -36,7 +36,7 @@ const authorsFunction = (authors) => {
 const articleString = articleFunction(articles);
 const authorsString = authorsFunction(authors);
 
-let categoriesHTML = document.querySelector("#categories");
+const categoriesHTML = document.querySelector("#categories");
 categoriesHTML.innerHTML = categoriesString;
 
 const articlesHTML = document.querySelector("#articles");

@@ -1,13 +1,12 @@
 import { getCategories } from "./database.js";
 
-const categories = getCategories();
+const categories = getCategories()
 
 export const categoriesFunction = (categories) => {
-    let htmlString = "<ul>";
+    let categoryHTML = "<ul>";
     for (const category of categories) {
-        htmlString += `<li id="category--${category.id}>"${category.name}</li>`;
+      categoryHTML += `<li id="category--${category.id}>"${category.name}</li>`;
     }
-    htmlString += "</ul>";
-    return htmlString;
-};
-
+    categoryHTML += "</ul>";
+    return categoryHTML;
+  };
