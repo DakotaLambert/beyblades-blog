@@ -46,7 +46,7 @@ const articleString = articleFunction(articles);
 const authorsString = authorsFunction(authors);
 const categoriesString = categoriesFunction(categories);
 
-const articlesHTML = document.querySelector("#articles");
+const articlesHTML = document.querySelector(".articles");
 articlesHTML.innerHTML = articleString; // todo: why are we getting an error here?
 
 const authorsHTMLString = document.querySelector("#authors");
