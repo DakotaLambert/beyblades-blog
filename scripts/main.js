@@ -1,6 +1,6 @@
 import { BeyBlog } from "./BeyBlog.js";
 import { getAuthors, getCategories, getArticles } from "./database.js";
-import { categoriesFunction } from './Categories.js'
+import { categoriesFunction } from './categories.js'
 
 const authors = getAuthors();
 const articles = getArticles();
@@ -32,8 +32,6 @@ const authorsFunction = (authors) => {
   authorsHTML += "</ul>";
   return authorsHTML;
 };
-<<<<<<< HEAD
-=======
 // * Justin
 const categoriesFunction = (categories) => {
   let htmlString = "<ul>";
@@ -43,7 +41,6 @@ const categoriesFunction = (categories) => {
   htmlString += "</ul>";
   return htmlString;
 };
->>>>>>> main
 
 const articleString = articleFunction(articles);
 const authorsString = authorsFunction(authors);
